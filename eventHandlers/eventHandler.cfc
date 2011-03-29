@@ -28,8 +28,8 @@
 		<cfsavecontent variable="features">
 			<cfloop condition="iterator.hasNext()">
 				<cfscript>
-					local.itemNav = iterator.next();
-					local.item = local.itemNav.getContentBean();
+					local.local.itemNav = iterator.next();
+					local.local.item = local.local.itemNav.getContentBean();
 					local.class = 'feature grid_4 ';
 					// Generate Alpha's and Omega's
 					if((iterator.currentIndex() MOD 3) EQ 1){
@@ -41,11 +41,11 @@
 				<cfoutput>
 					<div class="feature grid_4 class">
 						<div class="feature-inner">
-							<h3>#item.getValue('title')#</h3>
+							<h3>#local.item.getValue('title')#</h3>
 							<div class="image">
-								<img src="#createHREFforImage(item.getValue('siteID'),item.getValue('fileID'),item.getValue('fileEXT'),'medium')#" alt="#item.getValue('title')#" />
+								<img src="#createHREFforImage(local.local.item.getValue('siteID'),local.local.item.getValue('fileID'),local.local.item.getValue('fileEXT'),'medium')#" alt="#local.local.item.getValue('title')#" />
 							</div>
-							#item.getValue('summary')#
+							#local.local.item.getValue('summary')#
 						</div>
 					</div>
 				</cfoutput>

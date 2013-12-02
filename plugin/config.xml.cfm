@@ -3,7 +3,7 @@
 	<name>More dspObjects</name>
 	<package>moredspobjects</package>
 	<loadPriority></loadPriority>
-	<version>1.6</version>
+	<version>@{version}@.@{buildnumber}@</version>
 	<provider>David Long</provider>
 	<providerURL>http://www.davejlong.com</providerURL>
 	<category>Display Objects</category>
@@ -17,4 +17,8 @@
 		<displayObject name="Page Tools" displayobjectfile="displayObjects/dsp_pageTools.cfm" />
 		<displayObject name="FAQ Display (jQuery)" displayobjectfile="displayObjects/dsp_faqDisplay.cfm" />
 	</DisplayObjects>
+	<extensions>
+        <extension type="Folder" subType="FAQ">
+        </extension>
+</extensions>
 </plugin>

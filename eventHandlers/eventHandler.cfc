@@ -40,5 +40,13 @@
 
 		<cfreturn gistScript />
 	</cffunction>
+	<cffunction name="onFolderFAQBodyRender" output="false" returntype="any">
+          <cfargument name="$" type="struct" required="true" hint="mura scope" />
+          <cfset var local = {} />
+          <cfsavecontent variable="local.str"><cfoutput>
+               <cfinclude template="/plugins/#variables.pluginConfig.getDirectory()#/displayObjects/dsp_faqDisplay.cfm">
+          </cfoutput></cfsavecontent>
+          <cfreturn local.str />
+     </cffunction>
 </cfcomponent>
 

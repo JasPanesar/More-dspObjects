@@ -17,4 +17,8 @@
 		<displayObject name="Page Tools" displayobjectfile="displayObjects/dsp_pageTools.cfm" />
 		<displayObject name="FAQ Display (jQuery)" displayobjectfile="displayObjects/dsp_faqDisplay.cfm" />
 	</DisplayObjects>
+	<extensions>
+        <extension type="Folder" subType="FAQ">
+        </extension>
+</extensions>
 </plugin>
